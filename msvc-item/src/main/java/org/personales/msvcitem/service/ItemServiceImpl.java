@@ -9,6 +9,8 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
@@ -21,7 +23,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> findAll() {
-        List<Producto> productos = Arrays.asList(restTemplate.getForObject("http://localhost:8001/productos", Producto[].class));
+        List<Producto> productos = Arrays.asList(Objects.requireNonNull(restTemplate.getForObject("http://localhost:8001/productos", Producto[].class)));
         return productos.stream().map(producto -> new Item(producto, 1)).collect(Collectors.toList());
     }
 
