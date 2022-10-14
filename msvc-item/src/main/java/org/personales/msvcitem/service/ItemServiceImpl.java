@@ -10,11 +10,10 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
-@Service
+@Service("serviceRestTemplate")
 public class ItemServiceImpl implements ItemService {
 
     @Autowired
