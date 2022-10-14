@@ -20,8 +20,8 @@ public class ProductoServiceImpl implements ProductoService {
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<List<Producto>> findAll() {
-        return Optional.of(productoRepository.findAll());
+    public List<Producto> findAll() {
+        return productoRepository.findAll();
     }
 
     @Override
