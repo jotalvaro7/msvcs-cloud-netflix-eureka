@@ -1,8 +1,8 @@
-package org.personales.msvcproductos.controllers;
+package org.personales.msvcproductos.web.controller;
 
 import lombok.AllArgsConstructor;
-import org.personales.msvcproductos.models.entity.Producto;
-import org.personales.msvcproductos.service.ProductoService;
+import org.personales.msvcproductos.domain.dtos.ProductoDTO;
+import org.personales.msvcproductos.domain.service.ProductoDTOService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,19 +15,19 @@ import java.util.Optional;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/productos")
-public class ProductoController {
+public class ProductoDTOController {
 
     @Autowired
-    private ProductoService productoService;
+    private ProductoDTOService productoDTOService;
 
     @GetMapping()
-    public List<Producto> listar(){
-        return productoService.findAll();
+    public List<ProductoDTO> productos(){
+        return productoDTOService.getAll();
     }
 
     @GetMapping("/{productoId}")
-    public Producto detalle(@PathVariable Long productoId){
-        return productoService.findById(productoId);
+    public Optional<ProductoDTO> obtenerProducto(@PathVariable Long productoId){
+        return productoDTOService.getProducto(productoId);
     }
 
 }

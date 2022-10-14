@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="e98655dd-a250-4bb8-8ef3-c523f5b1b1c1" name="msvcs-cloud-netflix-eureka" url="jdbc:h2:file:~/h2/msvcs-cloud-netflix-eureka" driverClass="org.h2.Driver" />
+    </data-sources>
+  </component>
+</project>

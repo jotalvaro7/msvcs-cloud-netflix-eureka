@@ -1,4 +1,4 @@
-package org.personales.msvcproductos.models.entity;
+package org.personales.msvcproductos.persistance.entity;
 
 import lombok.Getter;
 import lombok.Setter;
