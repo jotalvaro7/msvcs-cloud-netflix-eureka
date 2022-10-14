@@ -8,14 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="msvc-productos" />
+        <module name="msvc-item" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="msvc-item" target="11" />
       <module name="msvc-productos" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="msvc-item" options="-parameters" />
       <module name="msvc-productos" options="-parameters" />
     </option>
   </component>

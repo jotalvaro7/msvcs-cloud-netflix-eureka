@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/msvc-productos/pom.xml" />
+        <option value="$PROJECT_DIR$/msvc-item/pom.xml" />
       </list>
     </option>
   </component>
