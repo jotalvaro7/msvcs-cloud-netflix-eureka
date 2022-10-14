@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import org.personales.msvcproductos.domain.dtos.ProductoDTO;
 import org.personales.msvcproductos.domain.service.ProductoDTOService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @AllArgsConstructor
 @RestController
@@ -21,13 +22,16 @@ public class ProductoDTOController {
     private ProductoDTOService productoDTOService;
 
     @GetMapping()
-    public List<ProductoDTO> productos(){
-        return productoDTOService.getAll();
+    public ResponseEntity<List<ProductoDTO>> productos(){
+        return new ResponseEntity<>(productoDTOService.getAll(), HttpStatus.OK);
     }
 
     @GetMapping("/{productoId}")
-    public Optional<ProductoDTO> obtenerProducto(@PathVariable Long productoId){
-        return productoDTOService.getProducto(productoId);
+    public ResponseEntity<?> obtenerProducto(@PathVariable Long productoId){
+        return productoDTOService.getProducto(productoId)
+                .map(producto -> new ResponseEntity<>(producto, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
+
 
 }
