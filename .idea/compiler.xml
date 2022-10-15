@@ -9,15 +9,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="msvc-productos" />
         <module name="msvc-item" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="eureka-server" target="11" />
       <module name="msvc-item" target="11" />
       <module name="msvc-productos" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-server" options="-parameters" />
       <module name="msvc-item" options="-parameters" />
       <module name="msvc-productos" options="-parameters" />
     </option>
