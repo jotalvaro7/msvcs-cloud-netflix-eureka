@@ -1,4 +1,4 @@
-package org.personales.msvcitem.models;
+package org.personales.msvcitem.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,11 +11,12 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Producto {
+public class ProductoDTO {
 
     private Long id;
     private String nombre;
     private Double precio;
     private Date createAt;
+    private Integer port;
 
 }

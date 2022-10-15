@@ -1,8 +1,8 @@
-package org.personales.msvcitem.controller;
+package org.personales.msvcitem.web.controller;
 
 
-import org.personales.msvcitem.models.Item;
-import org.personales.msvcitem.service.ItemService;
+import org.personales.msvcitem.domain.dto.ItemDTO;
+import org.personales.msvcitem.domain.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,13 +21,13 @@ public class ItemController {
     private ItemService itemService;
 
     @GetMapping()
-    public List<Item> getAllItems(){
-        return itemService.findAll();
+    public List<ItemDTO> getAllItems(){
+        return itemService.getAll();
     }
 
     @GetMapping("/{id}/cantidad/{cantidad}")
-    public Item getItemById(@PathVariable Long id, @PathVariable Integer cantidad){
-        return itemService.findById(id, cantidad);
+    public ItemDTO getItemById(@PathVariable Long id, @PathVariable Integer cantidad){
+        return itemService.getItemById(id, cantidad);
     }
 
 }

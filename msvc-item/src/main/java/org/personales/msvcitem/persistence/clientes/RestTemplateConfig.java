@@ -1,4 +1,4 @@
-package org.personales.msvcitem.config;
+package org.personales.msvcitem.persistence.clientes;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

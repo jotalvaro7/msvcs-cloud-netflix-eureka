@@ -1,4 +1,4 @@
-package org.personales.msvcitem.models;
+package org.personales.msvcitem.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,13 +9,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Item {
+public class ItemDTO {
 
-    private Producto producto;
+    private ProductoDTO productoDTO;
     private Integer cantidad;
 
     public Double getTotal() {
-        return producto.getPrecio() * cantidad.doubleValue();
+        return productoDTO.getPrecio() * cantidad.doubleValue();
     }
 
 }

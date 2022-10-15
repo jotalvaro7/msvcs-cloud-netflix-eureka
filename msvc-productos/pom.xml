@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.personales</groupId>
-    <artifactId>msvc-productos</artifactId>
+    <artifactId>msvc-productoDTOS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>msvc-productos</name>
-    <description>msvc-productos</description>
+    <name>msvc-productoDTOS</name>
+    <description>msvc-productoDTOS</description>
     <properties>
         <java.version>11</java.version>
     </properties>
