@@ -24,7 +24,7 @@ public class ProductoDTOController {
         return new ResponseEntity<>(productoDTOService.getAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/ver/{productoId}")
+    @GetMapping("/listar/{productoId}")
     public ResponseEntity<?> obtenerProducto(@PathVariable Long productoId){
         return productoDTOService.getProducto(productoId)
                 .map(producto -> new ResponseEntity<>(producto, HttpStatus.OK))

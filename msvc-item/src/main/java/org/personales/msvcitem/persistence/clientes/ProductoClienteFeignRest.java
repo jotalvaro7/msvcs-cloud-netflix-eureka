@@ -13,7 +13,7 @@ public interface ProductoClienteFeignRest {
     @GetMapping("/listar")
     List<ProductoDTO> getAll();
 
-    @GetMapping("/ver/{productoId}")
+    @GetMapping("/listar/{productoId}")
     ProductoDTO getProductoById(@PathVariable Long productoId);
 
 }

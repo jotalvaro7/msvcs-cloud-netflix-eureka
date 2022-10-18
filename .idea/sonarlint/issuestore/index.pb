@@ -27,7 +27,7 @@ A
 fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/ProductoDTORepository.java,9\b\9b1d56bc5bf0995f32454a4b0f2900a462190a93
 x
 Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
-…
-Umsvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceFeignImpl.java,f\f\ff6f058cc35fb0a5433e912c265d8ec3b86fd4d7
 ›
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoRepositoryImp.java,e\d\edeb37db944db3cfcb656b7191ec437914764051
+‡
+Wgateway-server/src/main/java/org/personales/gatewayserver/GatewayServerApplication.java,3\2\32a9093146d87bb31fedd26539767cc56e8a5e9b

@@ -23,7 +23,7 @@ public class ItemController {
         return itemService.getAll();
     }
 
-    @GetMapping("/ver/{id}/cantidad/{cantidad}")
+    @GetMapping("/listar/{id}/cantidad/{cantidad}")
     public ItemDTO getItemById(@PathVariable Long id, @PathVariable Integer cantidad){
         return itemService.getItemById(id, cantidad);
     }
