@@ -1,6 +1,5 @@
 package org.personales.msvcproductos.web.controller;
 
-import lombok.AllArgsConstructor;
 import org.personales.msvcproductos.domain.dtos.ProductoDTO;
 import org.personales.msvcproductos.domain.service.ProductoDTOService;
 import org.springframework.beans.factory.annotation.Autowired;
