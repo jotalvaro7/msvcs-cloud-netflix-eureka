@@ -10,10 +10,10 @@ import java.util.List;
 @FeignClient(name = "servicio-productos")
 public interface ProductoClienteFeignRest {
 
-    @GetMapping("/productos")
+    @GetMapping("/listar")
     List<ProductoDTO> getAll();
 
-    @GetMapping("productos/{productoId}")
+    @GetMapping("/ver/{productoId}")
     ProductoDTO getProductoById(@PathVariable Long productoId);
 
 }
