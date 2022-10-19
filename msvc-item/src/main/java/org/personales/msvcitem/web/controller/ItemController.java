@@ -1,6 +1,8 @@
 package org.personales.msvcitem.web.controller;
 
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.personales.msvcitem.domain.dto.ItemDTO;
 import org.personales.msvcitem.domain.dto.ProductoDTO;
 import org.personales.msvcitem.domain.service.ItemService;
@@ -12,6 +14,7 @@ import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 public class ItemController {
@@ -41,6 +44,21 @@ public class ItemController {
                         throwable -> metodoAlternativo(id, cantidad, throwable));
     }
 
+
+    @CircuitBreaker(name= "items", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/listar2/{id}/cantidad/{cantidad}")
+    public ItemDTO getItemById2(@PathVariable Long id, @PathVariable Integer cantidad){
+        return itemService.getItemById(id, cantidad);
+    }
+
+
+    @CircuitBreaker(name= "items", fallbackMethod = "metodoAlternativo2")
+    @TimeLimiter(name = "items")
+    @GetMapping("/listar3/{id}/cantidad/{cantidad}")
+    public CompletableFuture<ItemDTO> getItemById3(@PathVariable Long id, @PathVariable Integer cantidad){
+        return CompletableFuture.supplyAsync(() -> itemService.getItemById(id, cantidad));
+    }
+
     public ItemDTO metodoAlternativo(Long id, Integer cantidad, Throwable throwable){
         logger.info(throwable.getMessage());
         ItemDTO itemDTO = new ItemDTO();
@@ -51,6 +69,18 @@ public class ItemController {
         producto.setPrecio(500.00);
         itemDTO.setProductoDTO(producto);
         return itemDTO;
+    }
+
+    public CompletableFuture<ItemDTO> metodoAlternativo2(Long id, Integer cantidad, Throwable throwable){
+        logger.info(throwable.getMessage());
+        ItemDTO itemDTO = new ItemDTO();
+        ProductoDTO producto = new ProductoDTO();
+        itemDTO.setCantidad(cantidad);
+        producto.setId(id);
+        producto.setNombre("Camara Sony");
+        producto.setPrecio(500.00);
+        itemDTO.setProductoDTO(producto);
+        return CompletableFuture.supplyAsync(() -> itemDTO);
     }
 
 }

@@ -39,5 +39,3 @@ Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\
 jgateway-server/src/main/java/org/personales/gatewayserver/filters/factory/EjemploGatewayFilterFactory.java,a\7\a76c2b5477035d97ca442c1e3995cc78d7297322
 Š
 Zgateway-server/src/main/java/org/personales/gatewayserver/filters/EjemploGlobalFilter.java,a\9\a977d897510c31541c80642eae6028838fe7764e
-A
-msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
