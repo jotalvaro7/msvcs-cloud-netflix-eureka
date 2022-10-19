@@ -27,8 +27,6 @@ Umsvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceFeignImp
 bmsvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/ProductoClienteFeignRest.java,e\0\e0d1137fb467a0565c362c3c8a566624c76497da
 
 Omsvc-item/src/main/java/org/personales/msvcitem/domain/service/ItemService.java,5\d\5d397de6588493870c66180c6dd712feb3a93f6a
-“
-cmsvc-productos/src/main/java/org/personales/msvcproductos/web/controller/ProductoDTOController.java,6\b\6b4186690d961aa95a3153f919a4bc0cd028dfd6
 Š
 Zmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/entity/Producto.java,1\9\198e957807bfda63cd34630265051d7f2903d25f
 –

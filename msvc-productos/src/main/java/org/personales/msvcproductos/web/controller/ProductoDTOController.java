@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 public class ProductoDTOController {
@@ -23,7 +24,15 @@ public class ProductoDTOController {
     }
 
     @GetMapping("/listar/{productoId}")
-    public ResponseEntity<?> obtenerProducto(@PathVariable Long productoId){
+    public ResponseEntity<?> obtenerProducto(@PathVariable Long productoId) throws InterruptedException {
+
+        if(productoId.equals(10L)){
+            throw new IllegalStateException("El producto no existe");
+        }
+        if(productoId.equals(7L)){
+            TimeUnit.SECONDS.sleep(5);
+        }
+
         return productoDTOService.getProducto(productoId)
                 .map(producto -> new ResponseEntity<>(producto, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
