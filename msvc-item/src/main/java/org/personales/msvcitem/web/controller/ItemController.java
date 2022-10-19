@@ -37,8 +37,8 @@ public class ItemController {
     @GetMapping("/listar/{id}/cantidad/{cantidad}")
     public ItemDTO getItemById(@PathVariable Long id, @PathVariable Integer cantidad){
         return cbFactory.create("items")
-                .run(() -> itemService.getItemById(id, cantidad)/*,
-                        throwable -> metodoAlternativo(id, cantidad, throwable)*/);
+                .run(() -> itemService.getItemById(id, cantidad),
+                        throwable -> metodoAlternativo(id, cantidad, throwable));
     }
 
     public ItemDTO metodoAlternativo(Long id, Integer cantidad, Throwable throwable){
