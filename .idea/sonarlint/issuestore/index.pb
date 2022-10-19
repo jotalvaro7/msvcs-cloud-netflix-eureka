@@ -35,3 +35,9 @@ fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/Pro
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
 {
 Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\1\81141fe7985d2d53f303a4f2321149a5189782dd
+š
+jgateway-server/src/main/java/org/personales/gatewayserver/filters/factory/EjemploGatewayFilterFactory.java,a\7\a76c2b5477035d97ca442c1e3995cc78d7297322
+Š
+Zgateway-server/src/main/java/org/personales/gatewayserver/filters/EjemploGlobalFilter.java,a\9\a977d897510c31541c80642eae6028838fe7764e
+A
+msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
