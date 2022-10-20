@@ -37,7 +37,5 @@ Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\
 Pmsvc-item/src/main/java/org/personales/msvcitem/config/CircuitBreakerConfig.java,e\c\ec3a54b62bab8933dbc5a857f6c799f86578f68b
 ‚
 Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
-A
-msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
 †
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
