@@ -22,14 +22,14 @@ public class EjemploGatewayFilterFactory extends AbstractGatewayFilterFactory<Ej
     @Override
     public GatewayFilter apply(Configuracion config) {
         return (exchange, chain) -> {
-            log.info("ejecutando pre-filtro factory: " + config.mensaje);
+            log.info("ejecutando pre-filtro factory: {} ", config.mensaje);
             return chain.filter(exchange).then(Mono.fromRunnable(() -> {
 
                 Optional.ofNullable(config.cookieValor).ifPresent(cookie -> {
                     exchange.getResponse().addCookie(ResponseCookie.from(config.cookieNombre, cookie).build());
                 });
 
-                log.info("ejecutando post-filtro factory: " + config.mensaje);
+                log.info("ejecutando post-filtro factory: {} ", config.mensaje);
             }));
         };
     }

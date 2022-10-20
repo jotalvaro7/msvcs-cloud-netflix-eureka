@@ -1,3 +1,26 @@
+#configuracion de los parámetros de circuitBreaker y timeout
+resilience4j:
+  circuitbreaker:
+    configs:
+      defecto:
+        slidingWindowSize: 6
+        failureRateThreshold: 50
+        waitDurationInOpenState: 20s
+        permittedNumberOfCallsInHalfOpenState: 4
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2s
+    instances:
+      productos:
+        baseConfig: defecto
+  timelimiter:
+    configs:
+      defecto:
+        timeoutDuration: 2s
+    instances:
+      productos:
+        baseConfig: defecto
+
+#configuracion de spring cloud gateway con load balancing, circuit breaker, cookies y headers
 spring:
   cloud:
     gateway:
@@ -7,6 +30,11 @@ spring:
         predicates:
           - Path=/api/productos/**
         filters:
+          - name: CircuitBreaker
+            args:
+              name: productos
+              statusCodes: 500
+              fallbackUri: forward:/api/items/listar/9/cantidad/5
           - StripPrefix=2
           - name: EjemploCookie
             args:
