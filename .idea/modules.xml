@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/msvc-item/msvc-item.iml" filepath="$PROJECT_DIR$/msvc-item/msvc-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/msvc-productos/msvc-productos.iml" filepath="$PROJECT_DIR$/msvc-productos/msvc-productos.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/msvcs-cloud-netflix-eureka.iml" filepath="$PROJECT_DIR$/.idea/msvcs-cloud-netflix-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicio-config-server/servicio-config-server.iml" filepath="$PROJECT_DIR$/servicio-config-server/servicio-config-server.iml" />
     </modules>
   </component>
 </project>

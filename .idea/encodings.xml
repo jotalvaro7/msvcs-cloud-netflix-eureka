@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/msvc-item/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/msvc-productos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/msvc-productos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servicio-config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servicio-config-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicio-zuul-server/src/main/java" charset="UTF-8" />
   </component>
 </project>

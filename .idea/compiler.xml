@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="msvc-item" />
+        <module name="servicio-config-server" />
         <module name="gateway-server" />
         <module name="msvc-productos" />
         <module name="eureka-server" />
@@ -18,6 +19,7 @@
       <module name="gateway-server" target="11" />
       <module name="msvc-item" target="11" />
       <module name="msvc-productos" target="11" />
+      <module name="servicio-config-server" target="11" />
       <module name="servicio-zuul-server" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -27,6 +29,7 @@
       <module name="gateway-server" options="-parameters" />
       <module name="msvc-item" options="-parameters" />
       <module name="msvc-productos" options="-parameters" />
+      <module name="servicio-config-server" options="-parameters" />
       <module name="servicio-zuul-server" options="-parameters" />
     </option>
   </component>
