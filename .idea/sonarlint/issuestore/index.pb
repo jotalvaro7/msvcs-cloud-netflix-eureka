@@ -23,8 +23,6 @@ kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repositor
 Wgateway-server/src/main/java/org/personales/gatewayserver/GatewayServerApplication.java,3\2\32a9093146d87bb31fedd26539767cc56e8a5e9b
 …
 Umsvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceFeignImpl.java,f\f\ff6f058cc35fb0a5433e912c265d8ec3b86fd4d7
-’
-bmsvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/ProductoClienteFeignRest.java,e\0\e0d1137fb467a0565c362c3c8a566624c76497da
 
 Omsvc-item/src/main/java/org/personales/msvcitem/domain/service/ItemService.java,5\d\5d397de6588493870c66180c6dd712feb3a93f6a
 Š
@@ -35,7 +33,5 @@ fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/Pro
 Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\1\81141fe7985d2d53f303a4f2321149a5189782dd
 €
 Pmsvc-item/src/main/java/org/personales/msvcitem/config/CircuitBreakerConfig.java,e\c\ec3a54b62bab8933dbc5a857f6c799f86578f68b
-‚
-Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
 †
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
