@@ -3,6 +3,8 @@ package org.personales.msvcitem.web.controller;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.personales.msvcitem.domain.dto.ItemDTO;
 import org.personales.msvcitem.domain.dto.ProductoDTO;
 import org.personales.msvcitem.domain.service.ItemService;
@@ -22,6 +24,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
+@Slf4j
 public class ItemController {
 
     @Value("${configuracion.texto}")
@@ -30,7 +33,6 @@ public class ItemController {
     @Autowired
     private CircuitBreakerFactory cbFactory;
 
-    private final Logger logger = LoggerFactory.getLogger(ItemController.class);
 
     @Autowired
     @Qualifier("serviceFeign")
@@ -40,8 +42,8 @@ public class ItemController {
     public List<ItemDTO> getAllItems(
             @RequestParam(name = "nombre", required = false) String nombre,
             @RequestHeader(name = "token-request", required = false) String token){
-        System.out.println(nombre);
-        System.out.println(token);
+        log.info("Texto: {}", texto);
+        log.info("token: {} ", token);
         return itemService.getAll();
     }
 
@@ -68,7 +70,7 @@ public class ItemController {
     }
 
     public ItemDTO metodoAlternativo(Long id, Integer cantidad, Throwable throwable){
-        logger.info(throwable.getMessage());
+        log.info(throwable.getMessage());
         ItemDTO itemDTO = new ItemDTO();
         ProductoDTO producto = new ProductoDTO();
         itemDTO.setCantidad(cantidad);
@@ -80,7 +82,7 @@ public class ItemController {
     }
 
     public CompletableFuture<ItemDTO> metodoAlternativo2(Long id, Integer cantidad, Throwable throwable){
-        logger.info(throwable.getMessage());
+        log.info(throwable.getMessage());
         ItemDTO itemDTO = new ItemDTO();
         ProductoDTO producto = new ProductoDTO();
         itemDTO.setCantidad(cantidad);
@@ -94,12 +96,12 @@ public class ItemController {
 
     @GetMapping("/obtener-config")
     public ResponseEntity<?> obtenerConfig(@Value("${server.port}") String puerto){
-        logger.info(texto);
+        log.info(texto);
         //creamos un map para guardar la configuracion
         Map<String, String> json = new HashMap<>();
         json.put("texto", texto);
         json.put("puerto", puerto);
-        return new ResponseEntity<Map<String,String>>(json, HttpStatus.OK);
+        return new ResponseEntity<>(json, HttpStatus.OK);
     }
 
 }
