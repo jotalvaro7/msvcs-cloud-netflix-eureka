@@ -1,6 +1,7 @@
 package org.personales.msvcitem.persistence;
 
 import org.personales.msvcitem.domain.dto.ItemDTO;
+import org.personales.msvcitem.domain.dto.ProductoDTO;
 import org.personales.msvcitem.domain.service.ItemService;
 import org.personales.msvcitem.persistence.clientes.ProductoClienteFeignRest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,21 @@ public class ItemServiceFeignImpl implements ItemService {
     @Override
     public ItemDTO getItemById(Long id, Integer cantidad) {
         return new ItemDTO(clientFeign.getProductoById(id), cantidad);
+    }
+
+    @Override
+    public ProductoDTO save(ProductoDTO productoDTO) {
+        return clientFeign.save(productoDTO);
+    }
+
+    @Override
+    public ProductoDTO update(Long id,ProductoDTO productoDTO) {
+        return clientFeign.update(id, productoDTO);
+    }
+
+    @Override
+    public void deleteById(Long productoId) {
+        clientFeign.deleteById(productoId);
     }
 }
 

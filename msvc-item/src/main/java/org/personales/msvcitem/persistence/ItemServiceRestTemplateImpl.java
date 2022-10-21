@@ -31,4 +31,20 @@ public class ItemServiceRestTemplateImpl implements ItemService {
         return new ItemDTO(productoDTO, cantidad);
     }
 
+    @Override
+    public ProductoDTO save(ProductoDTO productoDTO) {
+        return null;
+    }
+
+    @Override
+    public ProductoDTO update(Long id, ProductoDTO productoDTO) {
+        return null;
+    }
+
+
+    @Override
+    public void deleteById(Long productoId) {
+
+    }
+
 }

@@ -112,4 +112,20 @@ public class ItemController {
         return new ResponseEntity<>(json, HttpStatus.OK);
     }
 
+    @PostMapping("/crear")
+    public ResponseEntity<ProductoDTO> crear(@RequestBody ProductoDTO productoDTO){
+        return new ResponseEntity<>(itemService.save(productoDTO), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/editar/{id}")
+    public ResponseEntity<ProductoDTO> editar(@PathVariable Long id, @RequestBody ProductoDTO productoDTO){
+        return new ResponseEntity<>(itemService.update(id, productoDTO), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    public ResponseEntity<?> eliminar(@PathVariable Long id){
+        itemService.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }

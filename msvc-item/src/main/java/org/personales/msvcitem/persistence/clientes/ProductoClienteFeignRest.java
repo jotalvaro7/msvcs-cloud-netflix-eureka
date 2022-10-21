@@ -2,8 +2,7 @@ package org.personales.msvcitem.persistence.clientes;
 
 import org.personales.msvcitem.domain.dto.ProductoDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,4 +15,12 @@ public interface ProductoClienteFeignRest {
     @GetMapping("/listar/{productoId}")
     ProductoDTO getProductoById(@PathVariable Long productoId);
 
+    @PostMapping("/crear")
+    ProductoDTO save(@RequestBody ProductoDTO productoDTO);
+
+    @PutMapping("/editar/{productoId}")
+    ProductoDTO update(@PathVariable Long productoId,  @RequestBody ProductoDTO productoDTO);
+
+    @DeleteMapping("/eliminar/{productoId}")
+    void deleteById(@PathVariable Long productoId);
 }

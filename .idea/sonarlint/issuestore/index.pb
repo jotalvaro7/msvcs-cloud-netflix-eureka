@@ -7,10 +7,6 @@ x
 Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
 ‡
 Wgateway-server/src/main/java/org/personales/gatewayserver/GatewayServerApplication.java,3\2\32a9093146d87bb31fedd26539767cc56e8a5e9b
-Œ
-\msvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/RestTemplateConfig.java,1\4\140fd6f0cfcbbfa5911578ee9839786d2fee0a8b
-’
-bmsvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/ProductoClienteFeignRest.java,e\0\e0d1137fb467a0565c362c3c8a566624c76497da
 „
 Teureka-server/src/main/java/org/personales/eurekaserver/EurekaServerApplication.java,7\2\729d5965193acb8eb2c46423362b6229bf7514b6
 F
@@ -19,12 +15,6 @@ F
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoJpaRepository.java,e\5\e5539896c27599ad1a5b636bdcbbacb714522e9e
 Ž
 ^msvc-productos/src/main/java/org/personales/msvcproductos/persistance/config/MapperConfig.java,c\2\c235d5a538890c5d18205d7cf343a0dbab7ad8f3
-…
-Umsvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceFeignImpl.java,f\f\ff6f058cc35fb0a5433e912c265d8ec3b86fd4d7
-Œ
-\msvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceRestTemplateImpl.java,3\4\34474929686309657f29cf51f6592869ca955f15
-
-Omsvc-item/src/main/java/org/personales/msvcitem/domain/service/ItemService.java,5\d\5d397de6588493870c66180c6dd712feb3a93f6a
 {
 Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\1\81141fe7985d2d53f303a4f2321149a5189782dd
 €
