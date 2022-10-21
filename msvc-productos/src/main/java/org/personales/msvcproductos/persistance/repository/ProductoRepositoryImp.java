@@ -3,6 +3,7 @@ package org.personales.msvcproductos.persistance.repository;
 import org.modelmapper.ModelMapper;
 import org.personales.msvcproductos.domain.dtos.ProductoDTO;
 import org.personales.msvcproductos.domain.repository.ProductoDTORepository;
+import org.personales.msvcproductos.persistance.entity.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -55,6 +56,21 @@ public class ProductoRepositoryImp implements ProductoDTORepository {
                     return productoDTO;
                 });
 
+    }
+
+    @Override
+    @Transactional
+    public ProductoDTO save(ProductoDTO productoDTO) {
+        Producto producto = mapper.map(productoDTO, Producto.class);
+        Producto productoFromDb = productoJPARepository.save(producto);
+        productoDTO.setId(productoFromDb.getId());
+        return productoDTO;
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(Long productoId) {
+        productoJPARepository.deleteById(productoId);
     }
 
 }

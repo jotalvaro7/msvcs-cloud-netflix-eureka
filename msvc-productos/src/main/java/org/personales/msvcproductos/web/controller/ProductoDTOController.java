@@ -5,9 +5,7 @@ import org.personales.msvcproductos.domain.service.ProductoDTOService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -36,6 +34,11 @@ public class ProductoDTOController {
         return productoDTOService.getProducto(productoId)
                 .map(producto -> new ResponseEntity<>(producto, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @PostMapping("/crear")
+    public ResponseEntity<ProductoDTO> crearProducto(@RequestBody ProductoDTO productoDTO){
+        return new ResponseEntity<>(productoDTOService.save(productoDTO), HttpStatus.CREATED);
     }
 
 

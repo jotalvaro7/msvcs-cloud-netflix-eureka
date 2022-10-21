@@ -24,5 +24,13 @@ public class ProductoDTOService {
         return productoDTORepository.getProducto(productoId);
     }
 
+    public ProductoDTO save(ProductoDTO productoDTO){
+        return productoDTORepository.save(productoDTO);
+    }
+
+    public void deleteById(Long productoId){
+        productoDTORepository.deleteById(productoId);
+    }
+
 
 }

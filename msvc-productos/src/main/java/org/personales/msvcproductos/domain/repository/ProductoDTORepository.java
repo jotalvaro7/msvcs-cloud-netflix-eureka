@@ -9,5 +9,7 @@ public interface ProductoDTORepository {
 
     List<ProductoDTO> getAll();
     Optional<ProductoDTO> getProducto(Long productoId);
+    ProductoDTO save(ProductoDTO productoDTO);
+    void deleteById(Long productoId);
 
 }
