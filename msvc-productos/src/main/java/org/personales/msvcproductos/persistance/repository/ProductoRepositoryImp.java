@@ -1,10 +1,10 @@
 package org.personales.msvcproductos.persistance.repository;
 
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.personales.msvcproductos.domain.dtos.ProductoDTO;
 import org.personales.msvcproductos.domain.repository.ProductoDTORepository;
 import org.personales.msvcproductos.persistance.entity.Producto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
@@ -15,17 +15,13 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Repository
 public class ProductoRepositoryImp implements ProductoDTORepository {
 
-    @Autowired
-    private ProductoJpaRepository productoJPARepository;
-
-    @Autowired
-    private ModelMapper mapper;
-
-    @Autowired
-    private Environment env;
+    private final ProductoJpaRepository productoJPARepository;
+    private final ModelMapper mapper;
+    private final Environment env;
 
     @Value("${server.port}")
     private Integer port;

@@ -39,3 +39,13 @@ F
 gateway-server/pom.xml,c\1\c1378869ff2e9e7ab602092a82de08a23a6c93f3
 w
 Gmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ItemDTO.java,6\c\6c5a748a3eb4e4997af45941d76e2d4c82896db0
+N
+servicio-config-server/pom.xml,5\b\5b895ffb1207426017206622d324781bf57cbc54
+A
+msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
+Ü
+Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
+ä
+Zmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/entity/Producto.java,1\9\198e957807bfda63cd34630265051d7f2903d25f
+ê
+`msvc-productos/src/main/java/org/personales/msvcproductos/domain/service/ProductoDTOService.java,5\6\5692c5f6cc11564fdc3e6b80952d179de4957b71
