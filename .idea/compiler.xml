@@ -12,6 +12,7 @@
         <module name="gateway-server" />
         <module name="msvc-productos" />
         <module name="eureka-server" />
+        <module name="servicio-usuarios" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="msvc-item" target="11" />
       <module name="msvc-productos" target="11" />
       <module name="servicio-config-server" target="11" />
+      <module name="servicio-usuarios" target="11" />
       <module name="servicio-zuul-server" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -30,6 +32,7 @@
       <module name="msvc-item" options="-parameters" />
       <module name="msvc-productos" options="-parameters" />
       <module name="servicio-config-server" options="-parameters" />
+      <module name="servicio-usuarios" options="-parameters" />
       <module name="servicio-zuul-server" options="-parameters" />
     </option>
   </component>
