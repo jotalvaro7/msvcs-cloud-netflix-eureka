@@ -9,10 +9,6 @@ Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3
 Wgateway-server/src/main/java/org/personales/gatewayserver/GatewayServerApplication.java,3\2\32a9093146d87bb31fedd26539767cc56e8a5e9b
 Ñ
 Teureka-server/src/main/java/org/personales/eurekaserver/EurekaServerApplication.java,7\2\729d5965193acb8eb2c46423362b6229bf7514b6
-F
-msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
-õ
-kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoJpaRepository.java,e\5\e5539896c27599ad1a5b636bdcbbacb714522e9e
 é
 ^msvc-productos/src/main/java/org/personales/msvcproductos/persistance/config/MapperConfig.java,c\2\c235d5a538890c5d18205d7cf343a0dbab7ad8f3
 Ä
@@ -31,14 +27,10 @@ A
 msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
 Ü
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
-ä
-Zmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/entity/Producto.java,1\9\198e957807bfda63cd34630265051d7f2903d25f
 ê
 `msvc-productos/src/main/java/org/personales/msvcproductos/domain/service/ProductoDTOService.java,5\6\5692c5f6cc11564fdc3e6b80952d179de4957b71
 ñ
 fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/ProductoDTORepository.java,9\b\9b1d56bc5bf0995f32454a4b0f2900a462190a93
-õ
-kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoRepositoryImp.java,e\d\edeb37db944db3cfcb656b7191ec437914764051
 å
 \msvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/RestTemplateConfig.java,1\4\140fd6f0cfcbbfa5911578ee9839786d2fee0a8b
 å

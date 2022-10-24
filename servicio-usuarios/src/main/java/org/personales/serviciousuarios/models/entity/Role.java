@@ -1,4 +1,4 @@
-package org.personales.serviciousuarios.entity;
+package org.personales.serviciousuarios.models.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,7 +16,6 @@ public class Role implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
     @Column(unique = true, length = 30)
     private String nombre;
