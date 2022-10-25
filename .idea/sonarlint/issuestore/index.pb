@@ -25,16 +25,10 @@ N
 servicio-config-server/pom.xml,5\b\5b895ffb1207426017206622d324781bf57cbc54
 Ü
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
-ê
-`msvc-productos/src/main/java/org/personales/msvcproductos/domain/service/ProductoDTOService.java,5\6\5692c5f6cc11564fdc3e6b80952d179de4957b71
-ñ
-fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/ProductoDTORepository.java,9\b\9b1d56bc5bf0995f32454a4b0f2900a462190a93
 å
 \msvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/RestTemplateConfig.java,1\4\140fd6f0cfcbbfa5911578ee9839786d2fee0a8b
 å
 \msvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceRestTemplateImpl.java,3\4\34474929686309657f29cf51f6592869ca955f15
-ì
-cmsvc-productos/src/main/java/org/personales/msvcproductos/web/controller/ProductoDTOController.java,6\b\6b4186690d961aa95a3153f919a4bc0cd028dfd6
 í
 bmsvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/ProductoClienteFeignRest.java,e\0\e0d1137fb467a0565c362c3c8a566624c76497da
 Ç
@@ -49,10 +43,6 @@ mservicio-config-server/src/main/java/org/personales/servicioconfigserver/Servic
 Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\1\81141fe7985d2d53f303a4f2321149a5189782dd
 ä
 Zmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/entity/Producto.java,1\9\198e957807bfda63cd34630265051d7f2903d25f
-õ
-kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoRepositoryImp.java,e\d\edeb37db944db3cfcb656b7191ec437914764051
-õ
-kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoJpaRepository.java,e\5\e5539896c27599ad1a5b636bdcbbacb714522e9e
 F
 msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
 m
