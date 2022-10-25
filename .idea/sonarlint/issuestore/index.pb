@@ -55,3 +55,11 @@ kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repositor
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoJpaRepository.java,e\5\e5539896c27599ad1a5b636bdcbbacb714522e9e
 F
 msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
+m
+=oauth/src/main/java/org/personales/oauth/models/dto/Role.java,8\c\8cb3132ac5a416398c9111c49176adf9715bb0cc
+n
+>oauth/src/main/java/org/personales/oauth/models/dto/Token.java,b\5\b586b537b2d05c2495e98625e34a61cf24e1b280
+=
+oauth/pom.xml,a\e\aeb847b0bc2a7ef24838833c9502c2ca772f112a
+A
+msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
