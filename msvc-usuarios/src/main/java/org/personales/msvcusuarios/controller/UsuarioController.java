@@ -5,6 +5,7 @@ import org.personales.msvcusuarios.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,10 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
+
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @GetMapping("/listar")
     public ResponseEntity<List<Usuario>> usuarios(){
@@ -36,6 +41,7 @@ public class UsuarioController {
 
     @PostMapping("/crear")
     public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario){
+        usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         return new ResponseEntity<>(usuarioService.save(usuario), HttpStatus.CREATED);
     }
 
