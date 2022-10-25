@@ -1,10 +1,10 @@
-package org.personales.serviciousuarios;
+package org.personales.msvcusuarios;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServicioUsuariosApplicationTests {
+class MsvcUsuariosApplicationTests {
 
 	@Test
 	void contextLoads() {

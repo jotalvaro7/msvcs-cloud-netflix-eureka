@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="msvc-usuarios" />
         <module name="msvc-item" />
         <module name="servicio-config-server" />
         <module name="gateway-server" />
         <module name="msvc-productos" />
         <module name="eureka-server" />
         <module name="oauth" />
-        <module name="servicio-usuarios" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +21,7 @@
       <module name="gateway-server" target="11" />
       <module name="msvc-item" target="11" />
       <module name="msvc-productos" target="11" />
+      <module name="msvc-usuarios" target="11" />
       <module name="oauth" target="11" />
       <module name="servicio-config-server" target="11" />
       <module name="servicio-usuarios" target="11" />
@@ -33,6 +34,7 @@
       <module name="gateway-server" options="-parameters" />
       <module name="msvc-item" options="-parameters" />
       <module name="msvc-productos" options="-parameters" />
+      <module name="msvc-usuarios" options="-parameters" />
       <module name="oauth" options="-parameters" />
       <module name="servicio-config-server" options="-parameters" />
       <module name="servicio-usuarios" options="-parameters" />

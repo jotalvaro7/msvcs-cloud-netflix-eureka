@@ -55,5 +55,3 @@ kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repositor
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoJpaRepository.java,e\5\e5539896c27599ad1a5b636bdcbbacb714522e9e
 F
 msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
-I
-servicio-usuarios/pom.xml,1\7\171ce790439708f58d027e9c8050b37b761feb1b
