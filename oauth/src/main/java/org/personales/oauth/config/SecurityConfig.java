@@ -1,4 +1,4 @@
-package org.personales.oauth.security;
+package org.personales.oauth.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
