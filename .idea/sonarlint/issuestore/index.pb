@@ -23,8 +23,6 @@ w
 Gmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ItemDTO.java,6\c\6c5a748a3eb4e4997af45941d76e2d4c82896db0
 N
 servicio-config-server/pom.xml,5\b\5b895ffb1207426017206622d324781bf57cbc54
-A
-msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
 Ü
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
 ê
@@ -59,7 +57,3 @@ F
 msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
 I
 servicio-usuarios/pom.xml,1\7\171ce790439708f58d027e9c8050b37b761feb1b
-á
-Wservicio-usuarios/src/main/java/org/personales/serviciousuarios/models/entity/Role.java,4\7\478337929839dc19f4152d50df6e9f74fc4d804b
-ä
-Zservicio-usuarios/src/main/java/org/personales/serviciousuarios/models/entity/Usuario.java,b\4\b42ad237b783d599af24e7d3a960ebf7ff9831a8
