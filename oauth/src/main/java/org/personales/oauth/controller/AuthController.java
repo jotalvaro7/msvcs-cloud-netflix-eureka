@@ -1,15 +1,12 @@
 package org.personales.oauth.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.personales.oauth.models.dto.Token;
-import org.personales.oauth.models.dto.Usuario;
+import org.personales.oauth.models.AuthCredentials;
+import org.personales.oauth.models.Token;
 import org.personales.oauth.services.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -21,8 +18,13 @@ public class AuthController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<Token> login(@RequestBody Usuario usuario) {
-        return ResponseEntity.ok(authService.login(usuario));
+    public ResponseEntity<Token> login(@RequestBody AuthCredentials authCredentials) {
+        return ResponseEntity.ok(authService.login(authCredentials));
+    }
+
+    @PostMapping("/validate")
+    public ResponseEntity<Token> validate(@RequestParam String token) {
+        return ResponseEntity.ok(authService.validateToken(token));
     }
 
 }

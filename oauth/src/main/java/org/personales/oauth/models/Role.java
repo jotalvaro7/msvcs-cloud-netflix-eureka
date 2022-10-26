@@ -1,4 +1,4 @@
-package org.personales.oauth.models.dto;
+package org.personales.oauth.models;
 
 import lombok.Getter;
 import lombok.Setter;

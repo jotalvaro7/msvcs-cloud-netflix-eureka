@@ -1,9 +1,10 @@
-package org.personales.oauth.models.dto;
+package org.personales.oauth.models;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Collection;
+
 
 @Getter
 @Setter
@@ -15,5 +16,5 @@ public class UsuarioDb {
     private String nombre;
     private String apellido;
     private String email;
-    private List<Role> roles;
+    private Collection<Role> roles;
 }

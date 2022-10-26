@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 
 @Getter
 @Setter
@@ -35,7 +35,7 @@ public class Usuario implements Serializable {
     @JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(name = "usuario_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"),
             uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "role_id"})})
-    private List<Role> roles;
+    private Collection<Role> roles;
 
     //Generated Serial Version UID
     private static final long serialVersionUID = 1L;

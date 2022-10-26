@@ -1,4 +1,4 @@
-package org.personales.oauth.config;
+package org.personales.oauth.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,9 +10,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
+    //implements security configuration
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests().anyRequest().permitAll();
+        http.headers().frameOptions().disable(); //configuration para permitir ver la base de datos h2 en el navegador
         return http.build();
     }
 

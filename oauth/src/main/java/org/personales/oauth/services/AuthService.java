@@ -1,10 +1,10 @@
 package org.personales.oauth.services;
 
 import org.personales.oauth.clients.UsuarioFeignClient;
-import org.personales.oauth.config.JwtProvider;
-import org.personales.oauth.models.dto.Token;
-import org.personales.oauth.models.dto.Usuario;
-import org.personales.oauth.models.dto.UsuarioDb;
+import org.personales.oauth.models.AuthCredentials;
+import org.personales.oauth.security.JwtProvider;
+import org.personales.oauth.models.Token;
+import org.personales.oauth.models.UsuarioDb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,15 +23,24 @@ public class AuthService {
     @Autowired
     private JwtProvider jwtProvider;
 
-    public Token login(Usuario usuario) {
-        UsuarioDb usuarioDb = client.findByUsername(usuario.getUsername());
+    public Token login(AuthCredentials authCredentials) {
+        UsuarioDb usuarioDb = client.findByUsername(authCredentials.getUsername());
 
-        if (!passwordEncoder.matches(usuario.getPassword(), usuarioDb.getPassword())) {
+        if (!passwordEncoder.matches(authCredentials.getPassword(), usuarioDb.getPassword())) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
         } else {
             return new Token(jwtProvider.createToken(usuarioDb));
         }
+    }
 
+    public Token validateToken(String token){
+        jwtProvider.validateToken(token);
+        String usernameFromToken = jwtProvider.getUsernameFromToken(token);
+        UsuarioDb usuarioDb = client.findByUsername(usernameFromToken);
+        if(usuarioDb == null){
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
+        }
+        return new Token(token);
     }
 
 }
