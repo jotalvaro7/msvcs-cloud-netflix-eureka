@@ -1,8 +1,6 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-‡
-Wmsvc-productos/src/main/java/org/personales/msvcproductos/MsvcProductosApplication.java,7\b\7b53a95eb4624a8da22170e4e47a66dcc191c302
 x
 Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
 ‡
@@ -29,14 +27,10 @@ Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoD
 \msvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceRestTemplateImpl.java,3\4\34474929686309657f29cf51f6592869ca955f15
 ’
 bmsvc-item/src/main/java/org/personales/msvcitem/persistence/clientes/ProductoClienteFeignRest.java,e\0\e0d1137fb467a0565c362c3c8a566624c76497da
-‚
-Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
 
 Omsvc-item/src/main/java/org/personales/msvcitem/domain/service/ItemService.java,5\d\5d397de6588493870c66180c6dd712feb3a93f6a
 …
 Umsvc-item/src/main/java/org/personales/msvcitem/persistence/ItemServiceFeignImpl.java,f\f\ff6f058cc35fb0a5433e912c265d8ec3b86fd4d7
-
-mservicio-config-server/src/main/java/org/personales/servicioconfigserver/ServicioConfigServerApplication.java,5\e\5e687c2836a2360b859d233d6b7af620f38c74e7
 {
 Kmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ProductoDTO.java,8\1\81141fe7985d2d53f303a4f2321149a5189782dd
 Š
@@ -51,8 +45,6 @@ Qmsvc-usuarios/src/main/java/org/personales/msvcusuarios/models/entities/Role.ja
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoJpaRepository.java,e\5\e5539896c27599ad1a5b636bdcbbacb714522e9e
 Š
 Zmsvc-usuarios/src/main/java/org/personales/msvcusuarios/persistence/UsuarioRepository.java,2\c\2ccf069d8ae6f18b0b2730661a423eb645519672
-“
-cmsvc-productos/src/main/java/org/personales/msvcproductos/web/controller/ProductoDTOController.java,6\b\6b4186690d961aa95a3153f919a4bc0cd028dfd6
 
 `msvc-productos/src/main/java/org/personales/msvcproductos/domain/service/ProductoDTOService.java,5\6\5692c5f6cc11564fdc3e6b80952d179de4957b71
 –
@@ -75,10 +67,6 @@ n
 >oauth/src/main/java/org/personales/oauth/models/UsuarioDb.java,6\b\6b132de55086fd1a440184c19b65c5d0f3899fc4
 i
 9oauth/src/main/java/org/personales/oauth/models/Role.java,2\e\2e9137238ff2b29480c7c6a1be842cfd98d3fb6d
-u
-Eoauth/src/main/java/org/personales/oauth/security/SecurityConfig.java,3\4\34104bb684f14409cdf3054467235fc739ff07eb
-w
-Goauth/src/main/java/org/personales/oauth/controller/AuthController.java,a\6\a678fe956de8ef9af13ba41f9c97d71ea5876597
 x
 Hoauth/src/main/java/org/personales/oauth/clients/UsuarioFeignClient.java,b\9\b988d29cb75cbc876939d4936df47f280e0d6948
 r
@@ -87,7 +75,5 @@ r
 Boauth/src/main/java/org/personales/oauth/security/JwtProvider.java,e\e\ee1834129d6afdc974043a5caebaff8f04730c27
 n
 >oauth/src/main/java/org/personales/oauth/OauthApplication.java,8\d\8d95ff74af0cf68f5f31cc9a5fec0139b1318a0a
-=
-oauth/pom.xml,a\e\aeb847b0bc2a7ef24838833c9502c2ca772f112a
 A
 msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
