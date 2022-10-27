@@ -3,7 +3,11 @@ package org.personales.oauth.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.slf4j.Slf4j;
 import org.personales.oauth.models.UsuarioDb;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
@@ -12,10 +16,14 @@ import java.util.Date;
 import java.util.Map;
 
 
+@Slf4j
+@RefreshScope
 @Component
 public class JwtProvider {
 
-    private static final String SECRET_KEY = "secret";
+
+    @Autowired
+    private Environment env;
 
     public String createToken(UsuarioDb usuarioDb){
 
@@ -34,14 +42,14 @@ public class JwtProvider {
                 .setClaims(claims)
                 .setIssuedAt(now)
                 .setExpiration(expirationDate)
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .signWith(SignatureAlgorithm.HS256, env.getProperty("config.security.oauth.jwt.key"))
                 .compact();
     }
 
 
     public void validateToken(String token){
         try {
-            Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token);
+            Jwts.parser().setSigningKey(env.getProperty("config.security.oauth.jwt.key")).parseClaimsJws(token);
         }catch (Exception e){
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
         }
@@ -49,7 +57,7 @@ public class JwtProvider {
 
     public String getUsernameFromToken(String token){
        try{
-           return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody().getSubject();
+           return Jwts.parser().setSigningKey(env.getProperty("config.security.oauth.jwt.key")).parseClaimsJws(token).getBody().getSubject();
        }catch (Exception e){
            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token invalido");
        }
