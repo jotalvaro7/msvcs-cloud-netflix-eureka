@@ -16,15 +16,9 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-
     @PostMapping("/login")
     public ResponseEntity<Token> login(@RequestBody AuthCredentials authCredentials) {
         return ResponseEntity.ok(authService.login(authCredentials));
-    }
-
-    @PostMapping("/validate")
-    public ResponseEntity<Token> validate(@RequestParam String token) {
-        return ResponseEntity.ok(authService.validateToken(token));
     }
 
 }

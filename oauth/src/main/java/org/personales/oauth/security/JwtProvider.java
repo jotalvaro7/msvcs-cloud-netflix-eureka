@@ -2,18 +2,20 @@ package org.personales.oauth.security;
 
 
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
+import org.personales.oauth.models.Role;
 import org.personales.oauth.models.UsuarioDb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -21,46 +23,42 @@ import java.util.Map;
 @Component
 public class JwtProvider {
 
-
     @Autowired
     private Environment env;
 
-    public String createToken(UsuarioDb usuarioDb){
+    public String createToken(UsuarioDb usuarioDb) {
 
-        Date now = new Date();
-        Date expirationDate = new Date(now.getTime() + 3600000L);
+        return Jwts.builder()
+                .setClaims(setClaims(usuarioDb))
+                .setIssuedAt(expeditionDate())
+                .setExpiration(expirationDate())
+                .signWith(getSecretKey())
+                .compact();
+    }
 
+    private Map<String, Object> setClaims(UsuarioDb usuarioDb) {
         Map<String, Object> claims = Jwts.claims().setSubject(usuarioDb.getUsername());
         claims.put("nombre", usuarioDb.getNombre());
         claims.put("apellido", usuarioDb.getApellido());
         claims.put("email", usuarioDb.getEmail());
-        claims.put("authorities", usuarioDb.getRoles());
-
-
-        return Jwts.builder()
-                .setSubject(usuarioDb.getUsername())
-                .setClaims(claims)
-                .setIssuedAt(now)
-                .setExpiration(expirationDate)
-                .signWith(SignatureAlgorithm.HS256, env.getProperty("config.security.oauth.jwt.key"))
-                .compact();
+        claims.put("roles", getRolesWithOutId(usuarioDb));
+        return claims;
     }
 
-
-    public void validateToken(String token){
-        try {
-            Jwts.parser().setSigningKey(env.getProperty("config.security.oauth.jwt.key")).parseClaimsJws(token);
-        }catch (Exception e){
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
-        }
+    private Date expeditionDate() {
+        return new Date();
     }
 
-    public String getUsernameFromToken(String token){
-       try{
-           return Jwts.parser().setSigningKey(env.getProperty("config.security.oauth.jwt.key")).parseClaimsJws(token).getBody().getSubject();
-       }catch (Exception e){
-           throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token invalido");
-       }
+    private Date expirationDate() {
+        return new Date(expeditionDate().getTime() + 3600 * 1000);
+    }
+
+    public List<String> getRolesWithOutId(UsuarioDb usuarioDb) {
+        return usuarioDb.getRoles().stream().map(Role::getNombre).collect(Collectors.toList());
+    }
+
+    private SecretKey getSecretKey() {
+        return Keys.hmacShaKeyFor(env.getProperty("config.security.oauth.jwt.key").getBytes());
     }
 
 }

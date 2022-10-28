@@ -1,5 +1,7 @@
 package org.personales.oauth.services;
 
+import lombok.extern.slf4j.Slf4j;
+import org.jetbrains.annotations.NotNull;
 import org.personales.oauth.clients.UsuarioFeignClient;
 import org.personales.oauth.models.AuthCredentials;
 import org.personales.oauth.security.JwtProvider;
@@ -31,16 +33,6 @@ public class AuthService {
         } else {
             return new Token(jwtProvider.createToken(usuarioDb));
         }
-    }
-
-    public Token validateToken(String token){
-        jwtProvider.validateToken(token);
-        String usernameFromToken = jwtProvider.getUsernameFromToken(token);
-        UsuarioDb usuarioDb = client.findByUsername(usernameFromToken);
-        if(usuarioDb == null){
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
-        }
-        return new Token(token);
     }
 
 }
