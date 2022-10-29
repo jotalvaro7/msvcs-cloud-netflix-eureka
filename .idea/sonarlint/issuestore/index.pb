@@ -47,8 +47,6 @@ fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/Pro
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoRepositoryImp.java,e\d\edeb37db944db3cfcb656b7191ec437914764051
 Ñ
 Tmsvc-usuarios/src/main/java/org/personales/msvcusuarios/services/UsuarioService.java,d\1\d14215a6e713a9a793e10466545192ae1a35a51e
-E
-msvc-usuarios/pom.xml,3\5\35db51b5be2bab04530d7f81843e70f086e9aaf0
 Ñ
 Tmsvc-usuarios/src/main/java/org/personales/msvcusuarios/models/entities/Usuario.java,b\e\bee7a212a1ed8bfab6c7ea7356bbb866ed47be78
 j
@@ -69,8 +67,6 @@ T.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_
 V.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_4.xml,8\9\89d6748da102c68a05e63aba60b9890890d88ba0
 á
 Wmsvc-productos/src/main/java/org/personales/msvcproductos/MsvcProductosApplication.java,7\b\7b53a95eb4624a8da22170e4e47a66dcc191c302
-A
-msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
 F
 gateway-server/pom.xml,c\1\c1378869ff2e9e7ab602092a82de08a23a6c93f3
 t
@@ -83,10 +79,6 @@ Eoauth/src/main/java/org/personales/oauth/security/SecurityConfig.java,3\4\3410
 Wgateway-server/src/main/java/org/personales/gatewayserver/GatewayServerApplication.java,3\2\32a9093146d87bb31fedd26539767cc56e8a5e9b
 n
 >oauth/src/main/java/org/personales/oauth/OauthApplication.java,8\d\8d95ff74af0cf68f5f31cc9a5fec0139b1318a0a
-Ç
-Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
-x
-Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
 è
 _gateway-server/src/main/java/org/personales/gatewayserver/security/JwtAuthenticationFilter.java,c\d\cd94d624427931390eef126b6f731de52b5cd4ff
 ê
@@ -105,3 +97,13 @@ r
 Boauth/src/main/java/org/personales/oauth/services/AuthService.java,7\b\7bb22817faaff51b59c3a065f38744d2c18b4db7
 r
 Boauth/src/main/java/org/personales/oauth/security/JwtProvider.java,e\e\ee1834129d6afdc974043a5caebaff8f04730c27
+E
+msvc-usuarios/pom.xml,3\5\35db51b5be2bab04530d7f81843e70f086e9aaf0
+Ç
+Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
+x
+Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
+F
+msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
+A
+msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
