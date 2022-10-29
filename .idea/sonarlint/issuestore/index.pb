@@ -47,8 +47,6 @@ fmsvc-productos/src/main/java/org/personales/msvcproductos/domain/repository/Pro
 kmsvc-productos/src/main/java/org/personales/msvcproductos/persistance/repository/ProductoRepositoryImp.java,e\d\edeb37db944db3cfcb656b7191ec437914764051
 „
 Tmsvc-usuarios/src/main/java/org/personales/msvcusuarios/services/UsuarioService.java,d\1\d14215a6e713a9a793e10466545192ae1a35a51e
-„
-Tmsvc-usuarios/src/main/java/org/personales/msvcusuarios/models/entities/Usuario.java,b\e\bee7a212a1ed8bfab6c7ea7356bbb866ed47be78
 j
 :oauth/src/main/java/org/personales/oauth/models/Token.java,a\3\a38624255b1c9b01b075900bd9b02457b8c78c56
 i
@@ -87,8 +85,6 @@ _gateway-server/src/main/java/org/personales/gatewayserver/security/JwtAuthentic
 \gateway-server/src/main/java/org/personales/gatewayserver/security/SpringSecurityConfig.java,9\1\91d6ea76bb756244e36d891c2a5ae8b13ade2893
 n
 >oauth/src/main/java/org/personales/oauth/models/UsuarioDb.java,6\b\6b132de55086fd1a440184c19b65c5d0f3899fc4
-‰
-Ymsvc-usuarios/src/main/java/org/personales/msvcusuarios/controller/UsuarioController.java,2\0\20bc5d36d5cfc3dbdad524ac55e861b291a5121f
 w
 Goauth/src/main/java/org/personales/oauth/controller/AuthController.java,a\6\a678fe956de8ef9af13ba41f9c97d71ea5876597
 =
@@ -97,13 +93,9 @@ r
 Boauth/src/main/java/org/personales/oauth/services/AuthService.java,7\b\7bb22817faaff51b59c3a065f38744d2c18b4db7
 r
 Boauth/src/main/java/org/personales/oauth/security/JwtProvider.java,e\e\ee1834129d6afdc974043a5caebaff8f04730c27
-E
-msvc-usuarios/pom.xml,3\5\35db51b5be2bab04530d7f81843e70f086e9aaf0
 ‚
 Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
 x
 Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
-F
-msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
 A
 msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
