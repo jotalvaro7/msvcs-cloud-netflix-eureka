@@ -1,7 +1,5 @@
 package org.personales.oauth.services;
 
-import lombok.extern.slf4j.Slf4j;
-import org.jetbrains.annotations.NotNull;
 import org.personales.oauth.clients.UsuarioFeignClient;
 import org.personales.oauth.models.AuthCredentials;
 import org.personales.oauth.security.JwtProvider;
