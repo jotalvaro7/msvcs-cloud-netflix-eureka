@@ -87,13 +87,5 @@ Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3
 Tmsvc-usuarios/src/main/java/org/personales/msvcusuarios/models/entities/Usuario.java,b\e\bee7a212a1ed8bfab6c7ea7356bbb866ed47be78
 r
 Boauth/src/main/java/org/personales/oauth/security/JwtProvider.java,e\e\ee1834129d6afdc974043a5caebaff8f04730c27
-A
-msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
-F
-msvc-productos/pom.xml,b\6\b6624f5acef043811da6e4943d8d722a63c3713f
-=
-oauth/pom.xml,a\e\aeb847b0bc2a7ef24838833c9502c2ca772f112a
 E
 eureka-server/pom.xml,b\3\b39ae52d769ea03b699b5602439afd875433c8a7
-E
-msvc-usuarios/pom.xml,3\5\35db51b5be2bab04530d7f81843e70f086e9aaf0
