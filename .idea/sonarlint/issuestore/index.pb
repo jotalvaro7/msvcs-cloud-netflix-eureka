@@ -13,8 +13,6 @@ Zgateway-server/src/main/java/org/personales/gatewayserver/filters/EjemploGlobal
 jgateway-server/src/main/java/org/personales/gatewayserver/filters/factory/EjemploGatewayFilterFactory.java,a\7\a76c2b5477035d97ca442c1e3995cc78d7297322
 w
 Gmsvc-item/src/main/java/org/personales/msvcitem/domain/dto/ItemDTO.java,6\c\6c5a748a3eb4e4997af45941d76e2d4c82896db0
-N
-servicio-config-server/pom.xml,5\b\5b895ffb1207426017206622d324781bf57cbc54
 †
 Vmsvc-productos/src/main/java/org/personales/msvcproductos/domain/dtos/ProductoDTO.java,2\d\2d8461d084259a7a1cf8b36050e2dcfb7954ccf7
 Œ
