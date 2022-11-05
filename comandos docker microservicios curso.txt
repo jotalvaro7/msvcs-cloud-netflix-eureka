@@ -1,0 +1,33 @@
+#####servidor de configuracion#####
+docker run -d -p 8888:8888 --name config-server --network springcloud config-server:v1
+
+#####servidor de Eureka#####
+docker run -d -p 8761:8761 --name servicio-eureka-server --network springcloud servicio-eureka-server:v1
+
+#####Mysql#####
+docker pull mysql
+docker run -d -p 3306:3306 --name microservicios-mysql8 --network springcloud -e MYSQL_ROOT_PASSWORD=sasa -e MYSQL_DATABASE=db_springboot_cloud -v data-mysql:/var/lib/mysql mysql:v8 
+
+#####Postgresql#####
+docker pull postgres:12-alpine
+docker run -d -p 5432:5432 --name microservicios-postgres12 --network springcloud -e POSTGRES_PASSWORD=sasa -e POSTGRES_DB=db_springboot_cloud -v data-postgres:/var/lib/postgresql/data postgres:12-alpine
+
+#####Msvc-productos#####   NOTA: -P = Puerto aleatorio sin especificar pero que esten disponibles
+docker build -t servicio-productos:v1 .
+docker run -d -P --network springcloud --name=servicio-productos servicio-productos:v1
+
+#####Gateway-server#####
+docker build -t gateway-server:v1 .
+docker run -d -p 8090:8090 --network springcloud --name gateway-server gateway-server:v1
+
+#####Msvc-usuarios#####
+docker build -t servicio-usuarios:v1 .
+docker run -d -P --network springcloud --name servicio-usuarios servicio-usuarios:v1
+
+#####oauth#####
+docker build -t servicio-oauth:v1 .
+docker run -d -p 9100:9100 --network springcloud --name servicio-oauth servicio-oauth:v1
+
+#####Msvc-items#####
+docker build -t servicio-items:v1 .
+docker run -d -p 8002:8002 --network springcloud --name servicio-items servicio-items:v1
