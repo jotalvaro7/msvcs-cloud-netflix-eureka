@@ -1,4 +1,5 @@
 #####servidor de configuracion#####
+docker build -t config-server:v1 .
 docker run -d -p 8888:8888 --name config-server --network springcloud config-server:v1
 
 #####servidor de Eureka#####
@@ -31,3 +32,11 @@ docker run -d -p 9100:9100 --network springcloud --name servicio-oauth servicio-
 #####Msvc-items#####
 docker build -t servicio-items:v1 .
 docker run -d -p 8002:8002 --network springcloud --name servicio-items servicio-items:v1
+
+#####rabbitmq#####
+docker pull rabbitmq:3.8-management
+docker run -d -p 5672:5672 -p 15672:15672 --name rabbitmq --network springcloud rabbitmq:3.11-management-alpine
+
+#####zipkin#####
+docker build -t zipkin-server:v1 .
+docker run -d -p 9411:9411 --name zipkin --network springcloud -e RABBIT_ADDRESSES=rabbitmq:5672 -e STORAGE_TYPE=mysql -e MYSQL_USER=zipkin -e MYSQL_PASS=zipkin -e MYSQL_HOST=microservicios-mysql8 zipkin-server:v1

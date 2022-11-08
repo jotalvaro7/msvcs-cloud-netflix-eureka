@@ -79,8 +79,6 @@ n
 >oauth/src/main/java/org/personales/oauth/models/UsuarioDb.java,6\b\6b132de55086fd1a440184c19b65c5d0f3899fc4
 ‚
 Rmsvc-item/src/main/java/org/personales/msvcitem/web/controller/ItemController.java,c\f\cf1e0c78e4e43f57a5ab408bb3cdd7cd34999e6d
-x
-Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
 „
 Tmsvc-usuarios/src/main/java/org/personales/msvcusuarios/models/entities/Usuario.java,b\e\bee7a212a1ed8bfab6c7ea7356bbb866ed47be78
 r
@@ -120,7 +118,7 @@ E
 oauth/Dockerfile,e\9\e9a8154afd89552862c651a8e47eb27f0c1e14ad
 H
 msvc-usuarios/Dockerfile,d\e\de40dde59f25d8bcce2561fd6e1df3af43f1c2ba
-D
-msvc-item/Dockerfile,c\0\c03970a74482224ff8c8e1c620dc4eb39118a6cc
 A
 msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
+=
+oauth/pom.xml,a\e\aeb847b0bc2a7ef24838833c9502c2ca772f112a
