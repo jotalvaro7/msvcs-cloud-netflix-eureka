@@ -122,3 +122,7 @@ A
 msvc-item/pom.xml,0\2\02afe8d0a2b62db45a4fb9d9a3722056958605b5
 =
 oauth/pom.xml,a\e\aeb847b0bc2a7ef24838833c9502c2ca772f112a
+D
+msvc-item/Dockerfile,c\0\c03970a74482224ff8c8e1c620dc4eb39118a6cc
+x
+Hmsvc-item/src/main/java/org/personales/msvcitem/MsvcItemApplication.java,3\2\3258ed39f6810f6fb779a57a441dc2865b15d9ea
